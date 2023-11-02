@@ -85,7 +85,7 @@ public class HomeController : Controller
     }
 
     public RedirectResult Insert(TodoItem todo)
-    {
+    { 
         using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
         {
             using (var tableCmd = con.CreateCommand())
@@ -103,7 +103,7 @@ public class HomeController : Controller
             }
         }
 
-        return Redirect("https://siarheimiachkoutodolist.azurewebsites.net");
+        return Redirect("/");
     }
 
     [HttpPost]
@@ -119,7 +119,7 @@ public class HomeController : Controller
             }
         }
 
-        return Json(new {});
+        return Json(id);
     }
 
     public RedirectResult Update(TodoItem todo)
@@ -141,6 +141,6 @@ public class HomeController : Controller
             }
         }
 
-        return Redirect("https://siarheimiachkoutodolist.azurewebsites.net");
+        return Redirect("/");
     }
 }

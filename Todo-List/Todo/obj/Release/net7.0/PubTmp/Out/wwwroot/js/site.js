@@ -6,7 +6,7 @@
         data: {
             id: i
         },
-        complete: function() {
+        success: function() {
             window.location.reload();
         }
     });
